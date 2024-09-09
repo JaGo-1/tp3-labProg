@@ -4,6 +4,8 @@
  */
 package tp3_labprog;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Admin
@@ -31,9 +33,8 @@ public class ConversorFarenheits extends javax.swing.JFrame {
         Title = new javax.swing.JLabel();
         subtitle = new javax.swing.JLabel();
         Input = new javax.swing.JTextField();
-        Subbutton = new javax.swing.JPanel();
-        ButtonLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -63,31 +64,6 @@ public class ConversorFarenheits extends javax.swing.JFrame {
         });
         Background.add(Input, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 70, 30));
 
-        Subbutton.setBackground(new java.awt.Color(204, 204, 204));
-
-        ButtonLabel.setBackground(new java.awt.Color(204, 255, 255));
-        ButtonLabel.setForeground(new java.awt.Color(0, 0, 0));
-        ButtonLabel.setText("CONVERTIR");
-
-        javax.swing.GroupLayout SubbuttonLayout = new javax.swing.GroupLayout(Subbutton);
-        Subbutton.setLayout(SubbuttonLayout);
-        SubbuttonLayout.setHorizontalGroup(
-            SubbuttonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SubbuttonLayout.createSequentialGroup()
-                .addContainerGap(45, Short.MAX_VALUE)
-                .addComponent(ButtonLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36))
-        );
-        SubbuttonLayout.setVerticalGroup(
-            SubbuttonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SubbuttonLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(ButtonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        Background.add(Subbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 160, 40));
-
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -101,6 +77,14 @@ public class ConversorFarenheits extends javax.swing.JFrame {
             }
         });
         Background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 40, 40));
+
+        jButton1.setText("CONVERTIR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        Background.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 160, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -127,6 +111,16 @@ public class ConversorFarenheits extends javax.swing.JFrame {
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+        Double celsius = Double.parseDouble(Input.getText());
+        Double farenheits = celsius * 9/5 + 32;
+        JOptionPane.showMessageDialog(rootPane, "CONVERTIDO A FARENHEITS: "+farenheits);
+        } catch(NumberFormatException nf) {
+            JOptionPane.showMessageDialog(rootPane,"Datos erróneos, intente nuevamente.");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,11 +159,10 @@ public class ConversorFarenheits extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
-    private javax.swing.JLabel ButtonLabel;
     private javax.swing.JLabel Clouds;
     private javax.swing.JTextField Input;
-    private javax.swing.JPanel Subbutton;
     private javax.swing.JLabel Title;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel subtitle;
     // End of variables declaration//GEN-END:variables
