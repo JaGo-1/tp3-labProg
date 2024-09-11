@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="TP3_LabProg">
+  <ClassDiagramComponents>
+    <Class name="ConversorFarenheits" package="tp3_labprog" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="Background" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="Clouds" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="Input" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Title" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="subtitle" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="InputActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jLabel1MousePressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jLabel1MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Login" package="tp3_labprog_login" visibility="public" xPosition="339.0" yPosition="445.0">
+      <Fields>
+        <Field name="bg" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="btn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="formBg" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="img" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jSeparator1" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator2" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="password" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="title_1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="title_2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="title_3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="user_input" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="user_inputActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="user_inputMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="btnMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="passwordMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
